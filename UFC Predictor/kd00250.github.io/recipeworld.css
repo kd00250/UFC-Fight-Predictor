@@ -1,0 +1,328 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #D4AF37;
+	color: #000000;
+	font-family: Verdana, Arial, sans-serif;
+	margin: 0;
+}
+
+#wrapper {
+	background-color: #F0F0F0;
+}
+
+header {
+	background-color: #D4AF37;
+	color: #F0F0F0;
+	font-family: Georgia, "Times New Roman", serif;
+	padding: 1em;
+	text-align: center;
+}
+
+#logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#logo img {
+	max-width: 181px;
+	max-height: 195px;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a:link {
+	color: #F0F0F0;
+}
+
+header a:visited {
+	color: #F0F0F0;
+}
+
+header a:hover {
+	color: #AEC3E3;
+}
+
+h1 {
+	font-size: 2em;
+	padding: 0.2em;
+	text-shadow: 3px 3px 3px #CCC;
+}
+
+h2 {
+	font-size: 1.2em;
+	text-shadow: 1px 1px 1px #777;
+}
+
+nav {
+	text-align: center;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	border-bottom: 1px solid #AEC3E3;
+	padding-bottom: .5em;
+	padding-top: .5em;
+	width: 100%;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav a:link {
+	color: #000066;
+}
+
+nav a:visited {
+	color: #5280C5;
+}
+
+nav a:hover {
+	color: #3262A3;
+}
+
+main {
+	background-color: #FFF;
+	border: 1px solid #AEC3E3;
+	display: block;
+	overflow: auto;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: center;
+}
+
+.category {
+	display: block;
+}
+
+section {
+	background-color: #EAEAEA;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	padding: 0;
+}
+
+section h3 {
+	background-color: #D4AF37;
+	font-size: 110%;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: .25em;
+}
+
+section ul,
+ol {
+	padding-left: 20px;
+	padding: 20px;
+}
+
+li {
+	margin-bottom: 10px;
+	line-height: 1.6;
+}
+
+section p {
+	padding: 0 .25em .25em .25em;
+}
+
+.category {
+	color: #D4AF37;
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: bold;
+}
+
+.soup {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#mobile {
+	display: inline;
+}
+
+#desktop {
+	display: none;
+}
+
+footer {
+	background-color: #D4AF37;
+	font-size: .70em;
+	font-style: italic;
+	padding: 1em;
+	text-align: center;
+	clear: both;
+}
+
+table {
+	border: 2px solid #000033;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	border: 2px solid #000033;
+	text-align: left;
+	padding: 8px;
+}
+
+a {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+img {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+	width: 80%;
+}
+
+textarea {
+	margin-bottom: .5em;
+}
+
+#gallery {
+	text-align: center;
+}
+
+#gallery img {
+	max-width: 300px;
+	max-height: 300px;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 480px) {
+	#logo img {
+		width: 100px;
+		height: 132px;
+	}
+}
+
+@media (min-width: 600px) {
+
+	#logo img {
+		max-width: 181px;
+		max-height: 195px;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	nav ul {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	nav li {
+		border-bottom: none;
+	}
+
+	#flow {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	section {
+		flex: 1;
+		min-width: 30%;
+	}
+
+	dl {
+		flex: 2;
+	}
+
+	img {
+		flex: 1;
+	}
+
+	#mobile {
+		display: none;
+	}
+
+	#desktop {
+		display: inline;
+	}
+
+	form {
+		display: grid;
+		flex-direction: column;
+		width: 40%;
+		grid-gap: 1em;
+		grid-template-columns: 6em 1fr 6em 1fr;
+	}
+
+	input[type="submit"] {
+		background-color: #EAEAEA;
+		grid-column: 2;
+	}
+
+	label {
+		align-content: center;
+	}
+
+	input,
+	textarea {
+		margin-bottom: .5em;
+	}
+}
+
+@media (min-width: 1024px) {
+	@supports (display: grid) {
+		header {
+			grid-area: header;
+		}
+
+		nav {
+			grid-area: nav;
+		}
+
+		main {
+			grid-area: main;
+		}
+
+		footer {
+			grid-area: footer;
+		}
+
+		#wrapper {
+			display: grid;
+			grid-template:
+				"header header"
+				"nav main"
+				"footer footer"
+				/ 180px;
+		}
+
+		nav ul {
+			flex-direction: column;
+			font-weight: bold;
+			font-size: 1.25em;
+		}
+	}
+}

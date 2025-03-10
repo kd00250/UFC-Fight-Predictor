@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Recipe World</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="recipeworld.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">UFC Predictor</a></h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Predict</a></li>
+        <li><a href="how.html">How It Works</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>UFC Predictor</h2>
+      <p>Predict the outcome of your favorite fighters</p>
+      <div id="flow">
+        <section>
+          <h3>Create dream matchups</h3>
+          <p>Tony and Khabib never fought, now you can clear the air with this prediction model.</p>
+        </section>
+        <section>
+          <h3>See how fights should have panned out</h3>
+          <p>Revisit past fights and see who was suppose to win.</p>
+        </section>
+        <section>
+          <h3>Not just UFC compatible</h3>
+          <p>This model can be used to predict the winner of any fight (within the same weight class).
+          </p>
+        </section>
+        <section>
+          <h3>Don't Know your fighters Stats?</h3>
+          <p>If you want don't know the stats a specific fighter. Look them up in the offical <b>UFC fighter database</b> website where you can filter fighter to 
+            find the stats of the fighter you want 
+            <a href="https://ufc.com/athletes/all">UFC Player DataBase</a>.</p>
+        </section>
+      </div>
+      <div id="gallery">
+        <img src="double champ.jpg" alt="double champ">
+        <img src="alex.jpg" alt="alex">
+        <img src="goats.jpg" alt="goats">
+        <img src="gsp.jpg" alt="gsp">
+        <img src="headshot.jpg" alt="headshot">
+        <img src="mighty mouse.jpg" alt="mighty mouse">
+        <img src="kick.jpg" alt="kick">
+       
+      </div>
+      <script>
+        const images = document.querySelectorAll('#gallery img');
+        let index = 0;
+
+        images.forEach((img, i) => {
+          if (i !== 0) {
+            img.style.display = 'none';
+          }
+        });
+
+        function rotateImages() {
+          images[index].style.display = 'none';
+
+          index = (index + 1) % images.length;
+
+          images[index].style.display = 'block';
+        }
+
+        setInterval(rotateImages, 3000); 
+      </script>
+    </main>
+    <footer>
+      Copyright &copy; 2024 UFC Predictor<br>
+      <a href="mailto:dearmank412@gmail.com">dearmank412@gmail.com</a>
+    </footer>
+  </div>
+</body>
+
+</html>

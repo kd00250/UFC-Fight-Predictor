@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Recipe World</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="recipeworld.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">Recipe World</a></h1>
+    </header>
+    <div id="logo">
+      <img src="logo.png" alt="logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Predict</a></li>
+        <li><a href="how.html">How It Works</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Choose From One of Our Delicious Categories</h2>
+      <h2>Choose From One of Our Delicious Categories</h2>
+      <script>
+        // Function to send a request to the backend and trigger the Java code
+        function triggerMainStart() {
+          fetch("http://localhost:8080/api/run-main") // Update the URL if your backend runs on a different address
+            .then(response => response.text()) // Parse the response as plain text
+            .then(data => {
+              alert(data); // Show a success or error message returned by the backend
+            })
+            .catch(error => {
+              console.error("Error:", error); // Log any errors for debugging
+            });
+        }
+      </script>
+      
+      <h2>Trigger Java Code</h2>
+      <button onclick="triggerMainStart()">Run Main.start()</button> <!-- Button to trigger the Java backend -->
+    </main>
+    <footer>
+      Copyright &copy; 2024 Recipe World<br>
+      <a href="mailto:kenneth@dearmanname.com">kenneth@dearman.com</a>
+    </footer>
+  </div>
+</body>
+
+</html>
